@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oliver Catania</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <div class="left-to-right">
+        <div class="div1">
+            <h1 style="padding-top: 55px;">Oliver Catania</h1>
+            <h2 style="padding-top: 10px">Software Developer</h2>
+            
+            <h4 class="subtitle">Third year bachelors student pursuing a Masters 
+                in Computer Science at the University of Guelph</h4>
+
+            <nav class="section-links">
+                <a href="#about">About</a>
+                <!-- <a href="#experience">Experience</a> -->
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
+            </nav>
+
+            <div class="social-icons">
+                <a href="https://github.com/olivercatania" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+
+                <a href="https://linkedin.com/in/oliver-catania" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                    <i class="fa-brands fa-linkedin"></i>
+                </a>
+
+                <a href="https://linkedin.com/in/oliver-catania" target="_blank" rel="noopener noreferrer">
+                    Resume
+                </a>
+
+            </div>
+        </div>
+        <div class="div2 p1">
+            <h3 id="about">About</h3>
+            
+            <p>
+                I’m a third-year Bachelor of Computing student (minor in Mathematics) at the University of Guelph, and I’ve been
+                recognized on the Dean’s Honour List each term. I’m passionate about full-stack development and software
+                engineering. I enjoy the balance of creativity and problem-solving that comes with building complete applications —
+                from polished user interfaces to reliable back-end systems — and turning rough ideas into intuitive, user-focused
+                products.
+            </p>
+            <p>
+                Outside of coding, I spend time learning guitar, piano, and drums, and I’ve performed live twice as part of a group
+                at the Annual Hart House Festival of Music at the University of Toronto.
+            </p>
+
+            
+            <!-- <h3 id="experience">Work Experience</h3>
+            <p>More text</p> -->
+            <h3 id="projects">Projects</h3>
+
+            <div>
+                <a class="projects" href="https://github.com/olivercatania/c-decrypt">
+                    <img src="images/decrypt-fixed.png" alt="photo of code">
+                    <span>Parallel decryption done in cParallel decryption done in cParallel decryption done in cParallel decryption done in cParallel decryption done in cParallel decryption done in cParallel decryption done in cParallel decryption done in cParallel decryption done in cParallel  i i  i i i i i i i i i i i i i i i i i i i i</span>
+                </a>
+            </div>
+            
+            <section id="contact">
+                <h3>Contact</h3>
+                    <form 
+                        id="contact-form"
+                        class="contact-form"
+                        action="https://formspree.io/f/xgoedpyl"
+                        method="POST">
+
+                        <label>
+                            Name
+                            <input type="text" name="name" autocomplete="name" required>
+                        </label>
+
+                        <label>
+                            Email
+                            <input type="email" name="email" autocomplete="email" required>
+                        </label>
+
+                        <label>
+                            Message
+                            <textarea name="message" rows="5" required></textarea>
+                        </label>
+
+                        <!-- Honeypot (spam trap): keep hidden -->
+                        <input type="text" name="_gotcha" class="hp" tabindex="-1" autocomplete="off">
+                        <button type="submit">Send</button>
+
+                        <p id="contact-status" class="form-status"></p>
+                    </form>
+            </section>
+        </div>
+       
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>
