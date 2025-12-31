@@ -1,11 +1,9 @@
 html{
-  background-color: #051937;
-  overscroll-behavior-y: none;
+  background: #051937;
 }
 
 body {
-  overscroll-behavior-y: none;
-  background-image: linear-gradient(to right top, #051937, #051937, #051937, #051937, #051937, #051937, #051937, #051937, #051937, #071b39, #0a1c3b, #0d1e3d, #132241, #182646, #1d2a4a, #222e4f);
+  background: linear-gradient(6deg,rgba(5, 25, 55, 1) 0%, rgba(5, 25, 55, 1) 11%, rgba(5, 25, 55, 1) 29%, rgba(10, 28, 59, 1) 44%, rgba(13, 30, 61, 1) 63%, rgba(19, 34, 65, 1) 73%, rgba(24, 38, 70, 1) 80%, rgba(29, 42, 74, 1) 85%, rgba(34, 46, 79, 1) 100%);
   padding: 0;
   margin: 0;
   width: 100%; 
@@ -29,6 +27,7 @@ body {
 
   .div1{
     position: static !important;
+    height: auto !important;
   }
 
   .div2{
