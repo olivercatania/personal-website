@@ -1,8 +1,9 @@
 html{
-  background: #051937;
-  
-} 
+  background-color: #051937;
+}
+
 body {
+  background-image: linear-gradient(to right top, #051937, #051937, #051937, #051937, #051937, #071b39, #0a1c3b, #0d1e3d, #132241, #182646, #1d2a4a, #222e4f);
   padding: 0;
   margin: 0;
   width: 100%; 
@@ -13,21 +14,6 @@ body {
   scroll-behavior: smooth;
   padding-bottom: env(safe-area-inset-bottom);
 }
-
-.page-bg{
-  position: fixed;
-  inset: 0;
-  z-index: -1;
-  pointer-events: none;
-
-  background-color: rgb(20, 19, 59);
-  background-image: linear-gradient(to right top,
-    #051937, #051937, #051937, #051937, #051937,
-    #071b39, #0a1c3b, #0d1e3d, #132241, #182646,
-    #1d2a4a, #222e4f
-  );
-}
-
 
 @media (max-width: 1000px) {
   .left-to-right{
@@ -41,7 +27,6 @@ body {
 
   .div1{
     position: static !important;
-    height: auto !important;
   }
 
   .div2{
