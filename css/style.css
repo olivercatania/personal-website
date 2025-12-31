@@ -9,6 +9,7 @@ html, body {
   color: white;
   font-family: DejaVu Sans Mono, monospace;
   scroll-behavior: smooth;
+  padding-bottom: env(safe-area-inset-bottom);
 }
 
 @media (max-width: 1000px) {
@@ -18,7 +19,7 @@ html, body {
 
   h1{
     font-size: 2.6rem !important;
-    padding-top: 80px !important;
+    padding-top: 40px !important;
   }
 
   .div1{
@@ -43,7 +44,7 @@ html, body {
 @media (max-width: 600px) {
   h1{
     font-size: 2rem !important;
-    padding-top: 90px !important;
+    padding-top: 20px !important;
   }
 
   .div1, .div2{
@@ -70,7 +71,7 @@ html, body {
 
 @media (max-width: 300px) {
   h1{
-    padding-top: 95px !important;
+    padding-top: 20px !important;
     font-size: 1.7rem !important;
   }
 
