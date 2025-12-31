@@ -179,7 +179,6 @@ p {
   display: flex;
   margin-top: 10px;
   padding: 8px;
-  width: 100vh;
   border-radius: 16px;
   transition: background-color 190ms ease;
 
@@ -188,19 +187,23 @@ p {
 }
 
 .projects:hover{
-  background-color: rgb(05, 19, 37, 0.6)
+  background-color: rgba(254, 254, 254, 0.05)
+}
+
+.projects:visited{
+  color: rgba(148, 148, 148, 0.6);
 }
 
 .projects img{
-  width: 150px;
+  width: 160px;
   height: 110px;
   margin-right: 20px;
 
   border-radius: 16px;
 }
 
-.project span{
-
+.projects span{
+  font-size: 0.85rem;
 }
 
 /* Contact form styling */
