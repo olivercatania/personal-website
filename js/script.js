@@ -1,27 +1,18 @@
-const form = document.getElementById("contact-form");
-const statusEl = document.getElementById("contact-status");
+// --- Project-card "hover-like" press feedback on mobile ---
+const projectCards = document.querySelectorAll('.projects');
 
-form.addEventListener("submit", async (e) => {
-    e.preventDefault();
-    statusEl.textContent = "Sending...";
+function clearPressed() {
+  projectCards.forEach(c => c.classList.remove('is-pressed'));
+}
 
-    try {
-        const res = await fetch(form.action, {
-            method: form.method,
-            body: new FormData(form),
-            headers: {"Accept": "application/json"}
-        });
-        
-        if (res.ok) {
-            statusEl.textContent = "Thanks — message sent!";
-            form.reset();
-        }else {
-            const data = await res.json().catch(() => null);
-            statusEl.textContent = data?.errors
-            ? data.errors.map(err => err.message).join(", ")
-            : "Oops — something went wrong.";
-        }
-    }catch {
-        statusEl.textContent = "Network error — please try again.";
-    }
+projectCards.forEach(card => {
+  card.addEventListener('touchstart', () => {
+    clearPressed();
+    card.classList.add('is-pressed');
+  }, { passive: true });
+
+  card.addEventListener('touchend', clearPressed, { passive: true });
+  card.addEventListener('touchcancel', clearPressed, { passive: true });
 });
+
+window.addEventListener('scroll', clearPressed, { passive: true });

@@ -202,15 +202,16 @@ p {
   padding: 8px;
   border-radius: 16px;
   transition: background-color 190ms ease;
+  -webkit-tap-highlight-color: rgba(254, 254, 254, 0.08);
 
   text-decoration: none;
 }
 
-.projects:hover{
-  background-color: rgba(254, 254, 254, 0.05)
+.projects.is-pressed{
+  background-color: rgba(254, 254, 254, 0.05);
 }
 
-.projects:active{
+.projects:hover{
   background-color: rgba(254, 254, 254, 0.05)
 }
 
