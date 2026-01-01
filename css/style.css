@@ -203,6 +203,7 @@ p {
   border-radius: 16px;
   transition: background-color 190ms ease;
   -webkit-tap-highlight-color: rgba(254, 254, 254, 0.08);
+  touch-action: pan-y;
 
   text-decoration: none;
 }

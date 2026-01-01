@@ -1,18 +1,27 @@
-// --- Project-card "hover-like" press feedback on mobile ---
-const projectCards = document.querySelectorAll('.projects');
+let activeCard = null;
 
-function clearPressed() {
-  projectCards.forEach(c => c.classList.remove('is-pressed'));
+function setActive(card) {
+  if (activeCard === card) return;
+  if (activeCard) activeCard.classList.remove("is-pressed");
+  activeCard = card;
+  if (activeCard) activeCard.classList.add("is-pressed");
 }
 
-projectCards.forEach(card => {
-  card.addEventListener('touchstart', () => {
-    clearPressed();
-    card.classList.add('is-pressed');
-  }, { passive: true });
+function updateFromPoint(x, y) {
+  const el = document.elementFromPoint(x, y);
+  const card = el ? el.closest(".projects") : null;
+  setActive(card);
+}
 
-  card.addEventListener('touchend', clearPressed, { passive: true });
-  card.addEventListener('touchcancel', clearPressed, { passive: true });
-});
+document.addEventListener("touchstart", (e) => {
+  const t = e.touches[0];
+  updateFromPoint(t.clientX, t.clientY);
+}, { passive: true });
 
-window.addEventListener('scroll', clearPressed, { passive: true });
+document.addEventListener("touchmove", (e) => {
+  const t = e.touches[0];
+  updateFromPoint(t.clientX, t.clientY);
+}, { passive: true });
+
+document.addEventListener("touchend", () => setActive(null), { passive: true });
+document.addEventListener("touchcancel", () => setActive(null), { passive: true });
