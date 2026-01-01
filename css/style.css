@@ -203,11 +203,14 @@ p {
   border-radius: 16px;
   transition: background-color 190ms ease;
 
-  
   text-decoration: none;
 }
 
 .projects:hover{
+  background-color: rgba(254, 254, 254, 0.05)
+}
+
+.projects:active{
   background-color: rgba(254, 254, 254, 0.05)
 }
 
