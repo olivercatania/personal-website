@@ -15,6 +15,18 @@ body {
   padding-bottom: env(safe-area-inset-bottom);
 }
 
+@media (min-width: 1150px) {
+  .section-links a{
+    font-size: 1.5rem !important;
+  }
+}
+
+@media (min-width: 1400px) {
+  .section-links a{
+    font-size: 2rem !important;
+  }
+}
+
 @media (max-width: 1000px) {
   .left-to-right{
     flex-direction: column !important;
@@ -81,6 +93,33 @@ body {
 
   .div1, .div2{
     padding-left: 16px!important;
+  }
+}
+
+@media (min-height: 650px) {
+  .social-icons{
+    padding-bottom: 50px !important;
+  }
+
+  .social-icons a{
+     font-size: 2rem !important;
+  }
+
+  .section-links a{
+    padding-top: 50px !important;
+    font-size: 1.5rem !important;
+  }
+
+  h1{
+    font-size: 4.4rem !important;
+  }
+
+  h2{
+    font-size: 2.2rem;
+  }
+
+  h4{
+    font-size: 1.2rem !important;
   }
 }
 
