@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A case study of a Dockerized full-stack platform for cleaning and analyzing large retail datasets.">
+    <title>E-Commerce Basket &amp; RFM Analytics Platform | Oliver Catania</title>
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="case-study.css">
+    <link rel="icon" type="image/png" href="../../terminal-icon-md-deep-blue.png" sizes="any">
+</head>
+<body class="case-study-body">
+    <a class="skip-link" href="#main-content">Skip to case study</a>
+
+    <header class="case-header">
+        <div class="case-container case-header__inner">
+            <a class="back-link back-link--icon" href="../../index.html#projects" aria-label="Back to projects">
+                <span aria-hidden="true">&larr;</span>
+            </a>
+            <a class="site-name" href="../../index.html">Oliver Catania</a>
+        </div>
+    </header>
+
+    <main id="main-content">
+        <article>
+            <section class="case-hero" aria-labelledby="case-title">
+                <div class="case-container">
+                    <p class="eyebrow">Full-stack analytics platform</p>
+                    <h1 id="case-title">E-Commerce Basket &amp; RFM Analytics Platform</h1>
+                    <p class="hero-summary">
+                        A Dockerized platform where users upload CSV or XLSX files, clean million-row retail datasets in the
+                        background, review invalid records, export trusted data, and explore customer, basket, and revenue trends.
+                    </p>
+
+                    <ul class="tags case-tags" aria-label="Technologies used">
+                        <li>Java</li>
+                        <li>Spring Boot</li>
+                        <li>React</li>
+                        <li>TypeScript</li>
+                        <li>MariaDB</li>
+                        <li>Docker / Docker Compose</li>
+                        <li>Flyway</li>
+                        <li>Apache POI</li>
+                        <li>GitLab CI</li>
+                    </ul>
+
+                    <p class="team-context">Team project: seven-person software engineering team</p>
+
+                    <figure class="screenshot-frame hero-screenshot">
+                        <a href="../../images/e-commerce-images/rfm-histograms.png" aria-label="Open the full-size RFM histograms application screenshot">
+                            <img
+                                src="../../images/e-commerce-images/rfm-histograms.png"
+                                alt="RFM histogram dashboard showing basket-size and order-value distributions with date and country filters"
+                                width="2558"
+                                height="1600"
+                                fetchpriority="high"
+                            >
+                        </a>
+                        <figcaption>
+                            Basket-size and order-value distributions with average, median, 90th percentile, and date and country filters.
+                        </figcaption>
+                    </figure>
+                </div>
+            </section>
+
+            <section class="case-section walkthrough-section" aria-labelledby="walkthrough-title">
+                <div class="case-container">
+                    <div class="section-heading">
+                        <p class="section-kicker">Application walkthrough</p>
+                        <h2 id="walkthrough-title">Inside the platform</h2>
+                    </div>
+
+                    <ol class="photo-list" role="list">
+                        <li class="photo-item">
+                            <p class="photo-copy">
+                                A cleaning-job request starts asynchronous work while the frontend polls processed rows,
+                                completion percentage, and estimated time remaining.
+                            </p>
+                            <figure class="screenshot-frame screenshot-frame--progress">
+                                <a href="../../images/e-commerce-images/processing-progress.png" aria-label="Open the full-size cleaning progress screenshot">
+                                    <span class="progress-screenshot__viewport">
+                                        <img
+                                            src="../../images/e-commerce-images/processing-progress.png"
+                                            alt="Cleaning job in progress at 312,021 of 1,067,371 rows, showing 29 percent complete and an estimated 380 seconds remaining"
+                                            width="2558"
+                                            height="1600"
+                                            loading="lazy"
+                                        >
+                                    </span>
+                                </a>
+                                <figcaption>An example million-row cleaning job reporting live progress.</figcaption>
+                            </figure>
+                        </li>
+
+                        <li class="photo-item">
+                            <p class="photo-copy">
+                                Raw data is cleaned or routed to manual review. Results are paginated, and Apache POI exports
+                                cleaned rows to Excel.
+                            </p>
+                            <figure class="screenshot-frame">
+                                <a href="../../images/e-commerce-images/cleaned-data-results.png" aria-label="Open the full-size cleaned data results screenshot">
+                                    <img
+                                        src="../../images/e-commerce-images/cleaned-data-results.png"
+                                        alt="Results page with tabs for successfully cleaned data, invalid items, raw data, Excel download, and a paginated records table"
+                                        width="2560"
+                                        height="1600"
+                                        loading="lazy"
+                                    >
+                                </a>
+                                <figcaption>Cleaned records, invalid items, raw data, and Excel export.</figcaption>
+                            </figure>
+                        </li>
+
+                        <li class="photo-item">
+                            <p class="photo-copy">
+                                RFM analysis combines recency, frequency, and monetary value with spend-based bubble sizing,
+                                monetary groups, and date and country filters.
+                            </p>
+                            <figure class="screenshot-frame">
+                                <a href="../../images/e-commerce-images/rfm-scatter-plot.png" aria-label="Open the full-size RFM customer scatter plot screenshot">
+                                    <img
+                                        src="../../images/e-commerce-images/rfm-scatter-plot.png"
+                                        alt="RFM customer scatter plot with recency and frequency axes, monetary color groups, spend-based bubble sizes, and date and country filters"
+                                        width="2560"
+                                        height="1600"
+                                        loading="lazy"
+                                    >
+                                </a>
+                                <figcaption>Customer behavior across recency, frequency, and monetary value.</figcaption>
+                            </figure>
+                        </li>
+
+                        <li class="photo-item">
+                            <p class="photo-copy">
+                                Country analytics show total revenue, country count, top country, exact revenue, and percentage
+                                share for a selected date range.
+                            </p>
+                            <figure class="screenshot-frame">
+                                <a href="../../images/e-commerce-images/revenue-share-country.png" aria-label="Open the full-size revenue share by country screenshot">
+                                    <img
+                                        src="../../images/e-commerce-images/revenue-share-country.png"
+                                        alt="Revenue share by country dashboard showing total revenue, 43 countries, top country, a donut chart, country revenue, percentage share, and date filters"
+                                        width="2558"
+                                        height="1600"
+                                        loading="lazy"
+                                    >
+                                </a>
+                                <figcaption>Revenue totals and proportional contribution by country.</figcaption>
+                            </figure>
+                        </li>
+                    </ol>
+                </div>
+            </section>
+
+            <section class="case-section summary-section" aria-labelledby="details-title">
+                <div class="case-container">
+                    <div class="section-heading">
+                        <p class="section-kicker">Project details</p>
+                        <h2 id="details-title">Behind the application</h2>
+                    </div>
+
+                    <div class="summary-grid">
+                        <section>
+                            <h3>Architecture</h3>
+                            <p>
+                                React and TypeScript connect to a Spring Boot REST API backed by MariaDB. Docker Compose defines
+                                the environment, and Flyway versions the schema.
+                            </p>
+                        </section>
+
+                        <section>
+                            <h3>Engineering workflow</h3>
+                            <p>
+                                Scrum, weekly standups, GitLab issues, merge requests and code review, wiki documentation, CI
+                                linting, unit tests, and mock-database or integration-style testing.
+                            </p>
+                        </section>
+                    </div>
+
+                </div>
+            </section>
+        </article>
+    </main>
+</body>
+</html>
